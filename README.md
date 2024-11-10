@@ -94,3 +94,34 @@ curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
     </Directory>
 </VirtualHost>
 ```
+
+***3. Comprobemos si funciona wordpress***
+
+***Primero tenemos que reiniciar apache***
+
+```
+service apache2 reload
+```
+
+***Ahora ejecutamos estos dos comando***
+
+```
+sudo a2ensite wordpress
+
+sudo a2enmod rewrite
+
+```
+
+***Volvemos a reiniciar apache***
+
+```
+service apache2 reload
+```
+
+***Ahora entramos en el navegador y comprobamos si funciona wordpress***
+
+```
+http://127.0.0.1/wp-admin/setup-config.php
+```
+
+ ![image](https://github.com/user-attachments/assets/d6748c8c-bd7b-476c-b849-f18dc67b0413)
